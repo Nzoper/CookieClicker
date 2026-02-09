@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieClicker</title>
+    <style>
+        body {
+            background-color: black;
+            font-size: 150%;
+        }
+        h1{
+            text-align: center;
+            color: whitesmoke
+        }
+        p {
+            text-align: center;
+            color: whitesmoke;
+            border: 10px double white;
+            width: 80%;
+            margin: auto;
+            background-color: grey;
+        }
+        .zone-jeu{
+            background-color: lightslategray;
+            width: 500px;
+            height: 500px;
+            margin-left: 680px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: 20px dashed black;
+            position: relative;
+        }
+        .cube{
+            position: absolute;
+            display: none;
+            font-size: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .bouton {
+            margin-left: 830px;
+            background-color: gray;
+            width: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: antiquewhite;
+            font-size: 100%;
+        }
+        @media screen and (max-width: 600px) {
+            .zone-jeu {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 30px;
+            }
+            .bouton {
+                margin: auto;
+                display: block;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CookieClicker</h1>
+    <p>Le but du jeu est de cliquer 10 fois sur
+
+        le cookie le plus rapidement possible. Si vous n'y arrivez
+
+        pas au bout de 10 secondes, c'est perdu.
+    </p>
+    <div class="zone-jeu">
+       <div class="cube" id="cube">🍪</div> 
+    </div> 
+    <input class="bouton" id="play" type="button" value="Démarrer le jeu"/>
+    <p class="Score">Score : <span id="affichage-score">0</span>  
+    </p>
+    <script src="script.js"></script>
+</body>
+</html>
